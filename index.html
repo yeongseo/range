@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8">
+<body>
+	<div id="myRect" style="width: 100px; height: 100px; background: red; transition: all 1s;"></div>
+		0<input type="range" id="myPicker" min="0" max="500">500
+
+		<div id="rangeValue" > </div>
+
+	<script>
+			myRect.onclick = function(){
+
+		myRect.style.height=myPicker.value+"px";
+		myRect.style.width=myPicker.value+"px";
+	}
+		myPicker.onchange=function(){
+
+			myRect.style.marginLeft=myPicker.value+"px";
+			rangeValue.innerHTML = myPicker.value;
+		}
+	</script>
+</body>
